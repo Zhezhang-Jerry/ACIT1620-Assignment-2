@@ -1,5 +1,11 @@
 *   {
     color: #31748f;
+
+}
+body    {
+    margin: 0;
+    border: 0;
+    padding: 0;
 }
 .container1 {
     display: grid;
