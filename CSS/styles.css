@@ -252,9 +252,9 @@ label {
     }
 
     #addnotes   {
-        width: 180px;
+        width: 200px;
         height: 300px;
-        font-size: large;
+        font-size: 20px;
     }
     .itemc2     {
         display: flex;
@@ -268,8 +268,6 @@ label {
     }
     .sidebar2  {
         display: flex;
-        align-items: center;
-        justify-content: center;
         padding: 0rem;
         background-color: #f2e9de;
     }
@@ -279,7 +277,7 @@ label {
         margin: 0px;
     }
     .slbuttonclose2  {
-        text-align: left;
+        text-align: center;
         width: 100px;
         padding: 1rem;
         font-size: larger;
