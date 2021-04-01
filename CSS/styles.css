@@ -207,13 +207,13 @@ label {
     }
     .menu   {
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row;
         list-style: none;
         border: 2rem;
         flex-grow: 2;
     }
     .menu a{
-        font-size: 0.75rem;
+        font-size: 1rem;
         text-decoration: none;
         margin:5px;
         text-align:center;
