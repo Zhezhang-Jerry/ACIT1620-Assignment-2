@@ -256,13 +256,13 @@ label {
     }
 
     #addnotes   {
-        width: 200px;
+        width: 180px;
         height: 60px;
         font-size: large;
     }
     .itemc2     {
         position: relative;
-        left: 120px;
+        left: 100px;
         width: 100px;
     }
     .sidebar2  {
