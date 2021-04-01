@@ -254,6 +254,7 @@ label {
     #addnotes   {
         width: 160px;
         height: 50px;
+        font-size: large;
     }
     .itemc2     {
         position: relative;
