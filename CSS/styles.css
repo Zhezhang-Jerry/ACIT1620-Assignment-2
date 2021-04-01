@@ -226,7 +226,7 @@ label {
     .content {
         grid-area: content;
         padding: 3rem;
-        font-size: smaller;
+        font-size: large;
         font-family: 'Stick', sans-serif;
     }
     .container2 {
