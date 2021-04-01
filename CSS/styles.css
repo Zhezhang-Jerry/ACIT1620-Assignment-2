@@ -222,6 +222,7 @@ label {
     .sidebar {
         grid-area: sidebar;
         background-color: #f2e9de;
+        flex-grow: 5;
     }
     .content {
         grid-area: content;
@@ -230,16 +231,13 @@ label {
         font-family: 'Stick', sans-serif;
     }
     .container2 {
-        display: flex;
-        flex-direction: column;
-        
-        /* display: grid;
+        display: grid;
         grid-template-rows: 3rem 45rem 3rem;
         grid-template-columns: 5rem 1fr;
         grid-template-areas:
             'header header header'
             'sidebar content content'
-            'footer footer footer'; */
+            'footer footer footer';
     }
     .bt{
         font-size: 10px;
@@ -251,8 +249,12 @@ label {
         padding: 0px;
     }
     .slbuttonclose1  {
+        position: relative;
+        left: 0%;
         padding: 0rem;
+        text-align: left;
     }
+
     #addnotes   {
         width: 200px;
         height: 60px;
@@ -271,8 +273,7 @@ label {
     .sidemenu   {
         list-style: none;
         width: 50px;
-        margin: 0;
-        padding: 0;
+        padding: 5%;
     }
     .slbuttonclose2  {
         text-align: left;
