@@ -225,7 +225,7 @@ label {
     }
     .content {
         grid-area: content;
-        padding: 3rem;
+        padding: 2rem;
         font-size: large;
         font-family: 'Stick', sans-serif;
     }
@@ -234,7 +234,7 @@ label {
         grid-template-rows: 3rem 45rem 3rem;
         grid-template-columns: 5rem 1fr;
         grid-template-areas:
-            'sidebar header header'
+            'header header header'
             'sidebar content content'
             'footer footer footer';
     }
@@ -263,12 +263,13 @@ label {
     .sidebar2  {
         grid-area: sidebar;
         padding: 0rem;
-        background-color: #faf4ed;
+        background-color: #f2e9de;
     }
     .sidemenu   {
         list-style: none;
         width: 50px;
-        padding: 18%;
+        margin: 0;
+        padding: 0;
     }
     .slbuttonclose2  {
         text-align: center;
@@ -276,7 +277,7 @@ label {
     .nlist  {
         height: 30px;
         text-align: left;
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
     label,
     textarea {
