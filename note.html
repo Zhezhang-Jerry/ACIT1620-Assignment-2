@@ -22,11 +22,13 @@
                     <li class="hlist"><a href="index.html">About</a></li>
                 </ul>
             </nav></div>
-            <div class="item sidebar2"><div class="slbuttonclose2"><button class="bt2" type="button"><<</button></div>
-            <ul class="sidemenu">
+            <div class="item sidebar2" id="sidebarmenu"><div class="slbuttonclose2">
+                <button id="buttonleft" class="bt2" type="button" onclick="slidein()" style="display: none;"><<</button>
+                <button id="buttonright" class="bt2" type="button" onclick="slideout()">>></button></div>
+            <ul id="slidemenu" class="sidemenu" style="display: none;">
                 <li class="nlist">My notes</li>
-                <li class="nlist"><a href="https://github.com/Zhezhang-Jerry/ACIT1620-Assignment-1">note one</a></li>                
-                <li class="nlist"><a href="https://github.com/Zhezhang-Jerry/Midterm-1620">note two</a></li>
+                <li class="nlist">note one</li>                
+                <li class="nlist">note two</li>
             </ul>
             </div>
         <div class="item content">
