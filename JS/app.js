@@ -10,6 +10,11 @@ function slidein() {
     document.getElementById("buttonleft").style.display = 'none';
     document.getElementById("sidebarmenu").style.backgroundColor = '#f2e9de';
 }
+function popout() {
+    document.getElementById("addnotes").style.display = 'block';
+    document.getElementById("itemcc2").style.display = 'block';
+    document.getElementById("createnotes").style.display = 'none';
+}
 
 
 

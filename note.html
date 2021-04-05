@@ -32,9 +32,13 @@
             </ul>
             </div>
         <div class="item content">
-            <div class="itemc1"><label for="addnotes"><button class="plus">+</button></label>
-            <textarea id="addnotes" name="addnotes">Your note here.</textarea></div>
-            <div class="itemc2"><button class="sd">save</button><button class="sd">delete</button></div>
+            <div class="itemc1">
+                <label for="addnotes"><button class="plus" id="plus" onclick="popout()">+</button>
+                     <div id="createnotes">create a new note</div>
+            </label>
+            <textarea id="addnotes" style="display: none;">Your note here.</textarea></div>
+            <div class="itemc2" id="itemcc2" style="display: none;">
+                <button class="sd">save</button><button class="sd">delete</button></div>
         </div>
         <div class="item footer2">created by Jerry Zhang</div>
         <script src="JS/app.js"></script>
