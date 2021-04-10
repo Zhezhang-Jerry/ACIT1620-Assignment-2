@@ -50,21 +50,19 @@ function deleteNote() {
     div.remove()
 }
 
-
-
-// function slideout() {
-//     document.getElementById("slidemenu").style.display = 'block';
-//     document.getElementById("buttonleft").style.backgroundColor = '#191724';
-//     document.getElementById("buttonright").style.display = 'none';
-//     document.getElementById("buttonleft").style.display = 'block';
-//     document.getElementById("sidebarmenu").style.backgroundColor = '#faf4ed';
-// }
-// function slidein() {
-//     document.getElementById("slidemenu").style.display = 'none';
-//     document.getElementById("buttonright").style.display = 'block';
-//     document.getElementById("buttonleft").style.display = 'none';
-//     document.getElementById("sidebarmenu").style.backgroundColor = '#f2e9de';
-// }
+function slideout() {
+    document.getElementById("slidemenu").style.display = 'block';
+    document.getElementById("buttonleft").style.color = '#e0def4';
+    document.getElementById("buttonright").style.display = 'none';
+    document.getElementById("buttonleft").style.display = 'block';
+    document.getElementById("sidebarmenu").style.backgroundColor = '#faf4ed';
+}
+function slidein() {
+    document.getElementById("slidemenu").style.display = 'none';
+    document.getElementById("buttonright").style.display = 'block';
+    document.getElementById("buttonleft").style.display = 'none';
+    document.getElementById("sidebarmenu").style.backgroundColor = '#f2e9de';
+}
 // function popout() {
 //     document.getElementById("addnotes").style.display = 'block';
 //     document.getElementById("itemcc2").style.display = 'block';
