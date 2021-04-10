@@ -1,5 +1,5 @@
 *   {
-    color: #31748f;
+    color: #1f1d2e;
 
 }
 body    {
@@ -90,7 +90,7 @@ body    {
     flex-wrap: wrap;
     flex-direction: column;
     padding: 2rem;
-    background-color: #faf4ed;
+    background-color: #f2e9de;
 }
 
 .content {
@@ -122,9 +122,6 @@ body    {
     text-align: center;
 }
 
-.slbuttonclose2  {
-    text-align: right;
-}
 
 .sidemenu   {
     display: flex;
@@ -170,6 +167,11 @@ body    {
 
 }
 
+#note-area  {
+    display: flex;
+    flex-direction: column;
+}
+
 a:link, a:visited  {
     list-style: none;
     text-decoration: none;
@@ -197,13 +199,8 @@ label {
 
 @media screen and (max-width: 812px){
     .container1 {
-        display: grid;
-        grid-template-rows: 3rem 45rem 3rem;
-        grid-template-columns: 5rem 1fr;
-        grid-template-areas:
-            'header header header'
-            'sidebar content content'
-            'footer footer footer';
+        display: flex;
+        flex-direction: column;
     }
     .menu   {
         display: flex;
@@ -220,32 +217,29 @@ label {
         font-family: 'Poppins', sans-serif;
     }
     .sidebar {
-        grid-area: sidebar;
         background-color: #f2e9de;
         flex-grow: 5;
+        height: 275px;
     }
     .content {
-        grid-area: content;
-        padding: 5rem;
+        display: flex;
+        flex-direction: column;
+        padding: 3rem;
         font-size: large;
         font-family: 'Stick', sans-serif;
+        height: 500px;
     }
     .container2 {
-        display: grid;
-        grid-template-rows: 3rem 45rem 3rem;
-        grid-template-columns: 5rem 1fr;
-        grid-template-areas:
-            'header header header'
-            'sidebar content content'
-            'footer footer footer';
+        display: flex;
+        flex-direction: column;
     }
     .bt{
-        font-size: 10px;
+        font-size: 20px;
         padding: 0px;
         text-align: center;
     }
     .bt2 {
-        font-size: 10px;
+        font-size: 20px;
         padding: 0px;
     }
     .slbuttonclose1  {
@@ -254,36 +248,47 @@ label {
         padding: 0rem;
         text-align: left;
     }
+    .plus   {
+        text-align: left;
+        font-size: larger;
+    }
 
     #addnotes   {
-        width: 200px;
-        height: 60px;
-        font-size: large;
+        width: 300px;
+        height: 150px;
+        font-size: 20px;
     }
     .itemc2     {
+        display: flex;
         position: relative;
-        left: 120px;
-        width: 100px;
+        left: 50px;
+        width: 50px;
+    }
+    .sd {
+        margin: 1rem;
+        font-size: large;
     }
     .sidebar2  {
-        grid-area: sidebar;
+        display: flex;
         padding: 0rem;
         background-color: #f2e9de;
     }
     .sidemenu   {
         list-style: none;
-        width: 50px;
-        padding: 5%;
+        width: 100px;
+        margin: 0px;
     }
     .slbuttonclose2  {
-        text-align: left;
-        position: relative;
-        left: 50px;
+        text-align: center;
+        width: 100px;
+        padding: 1rem;
+        font-size: larger;
     }
     .nlist  {
         height: 30px;
         text-align: left;
-        font-size: 1rem;
+        font-size: 20px;
+        padding: 1rem;
     }
     label,
     textarea {
