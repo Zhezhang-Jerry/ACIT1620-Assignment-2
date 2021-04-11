@@ -1,11 +1,9 @@
-*   {
-    color: #1f1d2e;
-
-}
 body    {
     margin: 0;
     border: 0;
     padding: 0;
+    color: #1f1d2e;
+
 }
 .container1 {
     display: grid;
@@ -138,14 +136,6 @@ body    {
     height: 30px;
 }
 
-.sd     {
-    border: 0;
-    padding: 1 20px;
-    text-align: center;
-    border-radius: 10px;
-    background-color: #f2e9de;
-}
-
 .plus   {
     border: 0;
     padding: 1 20px;
@@ -263,10 +253,6 @@ label {
         position: relative;
         left: 50px;
         width: 50px;
-    }
-    .sd {
-        margin: 1rem;
-        font-size: large;
     }
     .sidebar2  {
         display: flex;

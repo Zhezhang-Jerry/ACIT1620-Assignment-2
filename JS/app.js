@@ -29,6 +29,8 @@ function saveNote() {
     const title = div.firstChild.textContent
     const body = convertTexttoString()
     notesArray.push(addNote(title, body))
+    document.getElementById("createnotes").style.display = 'block';    
+    document.getElementById("slidemenu").style.display = 'block';
     deleteNote()
 }
 
@@ -47,22 +49,47 @@ function convertTexttoString() {
 
 function deleteNote() {
     const div = document.querySelector('#note-area')
+    document.getElementById("createnotes").style.display = 'block';
     div.remove()
 }
 
 function slideout() {
     document.getElementById("slidemenu").style.display = 'block';
-    document.getElementById("buttonleft").style.color = '#e0def4';
+    document.getElementById("buttonleft").style.color = '#1f1d2e';
     document.getElementById("buttonright").style.display = 'none';
     document.getElementById("buttonleft").style.display = 'block';
     document.getElementById("sidebarmenu").style.backgroundColor = '#faf4ed';
 }
+
 function slidein() {
     document.getElementById("slidemenu").style.display = 'none';
     document.getElementById("buttonright").style.display = 'block';
     document.getElementById("buttonleft").style.display = 'none';
     document.getElementById("sidebarmenu").style.backgroundColor = '#f2e9de';
 }
+
+let countclick = 0
+function turnDark() {
+    if (countclick == 0) {
+    document.getElementById("header").style.backgroundColor = '#1f1d2e';
+    document.getElementById("footer").style.backgroundColor = '#1f1d2e';
+    document.getElementById("sidebarmenu").style.backgroundColor = '#1f1d2e';
+    document.getElementById("icontent").style.backgroundColor = '#1f1d2e';
+    document.getElementById("buttonleft").style.backgroundColor = '#1f1d2e';
+    document.getElementById("buttonright").style.backgroundColor = '#1f1d2e';
+    document.getElementById('bdy').style.color = '#fffaf3';
+    countclick = 1;}
+    else {
+        document.getElementById("header").style.backgroundColor = '#f2e9de';
+    document.getElementById("footer").style.backgroundColor = '#f2e9de';
+    document.getElementById("sidebarmenu").style.backgroundColor = '#f2e9de';
+    document.getElementById("icontent").style.backgroundColor = '#f2e9de';
+    document.getElementById("buttonleft").style.backgroundColor = '#f2e9de';
+    document.getElementById("buttonright").style.backgroundColor = '#f2e9de';
+    document.getElementById('bdy').style.color = '#1f1d2e';
+    countclick = 0;
+    }}
+
 // function popout() {
 //     document.getElementById("addnotes").style.display = 'block';
 //     document.getElementById("itemcc2").style.display = 'block';
