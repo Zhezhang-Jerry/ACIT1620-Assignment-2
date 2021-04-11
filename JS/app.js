@@ -100,21 +100,6 @@ function closebtn() {
 
 }
 
-function slideout() {
-    document.getElementById("slidemenu").style.display = 'block';
-    document.getElementById("buttonleft").style.color = '#1f1d2e';
-    document.getElementById("buttonright").style.display = 'none';
-    document.getElementById("buttonleft").style.display = 'block';
-    document.getElementById("sidebarmenu").style.backgroundColor = '#faf4ed';
-}
-
-function slidein() {
-    document.getElementById("slidemenu").style.display = 'none';
-    document.getElementById("buttonright").style.display = 'block';
-    document.getElementById("buttonleft").style.display = 'none';
-    document.getElementById("sidebarmenu").style.backgroundColor = '#f2e9de';
-}
-
 let countclick = 0;
 let darkmode = document.getElementById('darkmode');
 let cssLink = document.getElementById('link1')
@@ -131,33 +116,19 @@ darkmode.addEventListener('click', function() {
             countclick = 0
         }}})
 
+function slideout() {
+    document.getElementById("slidemenu").style.display = 'block';
+    document.getElementById("buttonleft").style.color = '#1f1d2e';
+    document.getElementById("buttonright").style.display = 'none';
+    document.getElementById("buttonleft").style.display = 'block';
+    document.getElementById("sidebarmenu").style.backgroundColor = '#faf4ed';
+}
 
-// let header = document.getElementById('header');
-// let footer =  document.getElementById("footer");
-// let sidebarmenu = document.getElementById("sidebarmenu");
-// let icontent = document.getElementById("icontent");
-// let buttonleft = document.getElementById("buttonleft");
-// let buttonright = document.getElementById("buttonright");
-// let bdy = document.getElementById('bdy')
-// let idArray = [header, footer, sidebarmenu, icontent, bdy]
+function slidein() {
+    document.getElementById("slidemenu").style.display = 'none';
+    document.getElementById("buttonright").style.display = 'block';
+    document.getElementById("buttonleft").style.display = 'none';
+    document.getElementById("sidebarmenu").style.backgroundColor = '#f2e9de';
+}
 
-// let countclick = 0;
-// let darkmode = document.getElementById('darkmode');
-// darkmode.addEventListener('click', function () {
-//     if (countclick == 0) {
-//         for (let element of idArray ) {
-//             if (element != bdy) {
-//                 element.style.backgroundColor = '#1f1d2e'
-//         }   else {
-//                 element.style.color = '#fffaf3'
-//         }
-//     countclick = 1; } }
-//     else {
-//         for (const element of idArray) {
-//             if (element != bdy) {
-//                 element.style.backgroundColor = '#f2e9de'
-//         }   else {
-//                 element.style.color = '#1f1d2e'
-//         countclick = 0;}
-//     }
-//     }});
+
