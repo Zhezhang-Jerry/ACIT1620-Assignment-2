@@ -68,27 +68,54 @@ function slidein() {
     document.getElementById("sidebarmenu").style.backgroundColor = '#f2e9de';
 }
 
-let countclick = 0
-function turnDark() {
+let header = document.getElementById('header');
+let footer =  document.getElementById("footer");
+let sidebarmenu = document.getElementById("sidebarmenu");
+let icontent = document.getElementById("icontent");
+let buttonleft = document.getElementById("buttonleft");
+let buttonright = document.getElementById("buttonright");
+let bdy = document.getElementById('bdy');
+let idArray = [header, footer, sidebarmenu, icontent, buttonleft, buttonright, bdy]
+
+let countclick = 0;
+let darkmode = document.getElementById('darkmode');
+darkmode.addEventListener('click', function () {
     if (countclick == 0) {
-    document.getElementById("header").style.backgroundColor = '#1f1d2e';
-    document.getElementById("footer").style.backgroundColor = '#1f1d2e';
-    document.getElementById("sidebarmenu").style.backgroundColor = '#1f1d2e';
-    document.getElementById("icontent").style.backgroundColor = '#1f1d2e';
-    document.getElementById("buttonleft").style.backgroundColor = '#1f1d2e';
-    document.getElementById("buttonright").style.backgroundColor = '#1f1d2e';
-    document.getElementById('bdy').style.color = '#fffaf3';
-    countclick = 1;}
+        for (const element of idArray ) {
+            if (element != bdy) {
+                element.style.backgroundColor = '#1f1d2e'
+        }   else {
+                element.style.backgroundColor = 'fffaf3'
+        }
+    countclick = 1; } }
     else {
-        document.getElementById("header").style.backgroundColor = '#f2e9de';
-    document.getElementById("footer").style.backgroundColor = '#f2e9de';
-    document.getElementById("sidebarmenu").style.backgroundColor = '#f2e9de';
-    document.getElementById("icontent").style.backgroundColor = '#f2e9de';
-    document.getElementById("buttonleft").style.backgroundColor = '#f2e9de';
-    document.getElementById("buttonright").style.backgroundColor = '#f2e9de';
-    document.getElementById('bdy').style.color = '#1f1d2e';
-    countclick = 0;
-    }}
+        for (const element of idArray) {
+        element.style.backgroundColor = '#f2e9de'
+        countclick = 0;}
+    }
+    });
+
+
+// function turnDark() {
+//     if (countclick == 0) {
+//     document.getElementById("header").style.backgroundColor = '#1f1d2e';
+//     document.getElementById("footer").style.backgroundColor = '#1f1d2e';
+//     document.getElementById("sidebarmenu").style.backgroundColor = '#1f1d2e';
+//     document.getElementById("icontent").style.backgroundColor = '#1f1d2e';
+//     document.getElementById("buttonleft").style.backgroundColor = '#1f1d2e';
+//     document.getElementById("buttonright").style.backgroundColor = '#1f1d2e';
+//     document.getElementById('bdy').style.color = '#fffaf3';
+//     countclick = 1;}
+//     else {
+//         document.getElementById("header").style.backgroundColor = '#f2e9de';
+//     document.getElementById("footer").style.backgroundColor = '#f2e9de';
+//     document.getElementById("sidebarmenu").style.backgroundColor = '#f2e9de';
+//     document.getElementById("icontent").style.backgroundColor = '#f2e9de';
+//     document.getElementById("buttonleft").style.backgroundColor = '#f2e9de';
+//     document.getElementById("buttonright").style.backgroundColor = '#f2e9de';
+//     document.getElementById('bdy').style.color = '#1f1d2e';
+//     countclick = 0;
+//     }}
 
 // function popout() {
 //     document.getElementById("addnotes").style.display = 'block';
