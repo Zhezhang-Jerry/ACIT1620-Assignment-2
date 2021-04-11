@@ -26,28 +26,13 @@ function setMouse() {
 
 function saveNote() {
     const note = document.querySelector('textarea').value
-<<<<<<< HEAD
-    console.log(note)
-=======
->>>>>>> a2
     const notearr = note.split('\n\n')
     notesArray.push(createNoteObject(notearr))
     document.querySelector('textarea').value = ""
     console.log(notesArray)
-<<<<<<< HEAD
-    createNoteObject(notearr)
-    let output_textarea = document.querySelector('#note1')
-    output_textarea.textContent = notearr[0].value;
-    // const title = note.firstChild.textContent
-    // const body = convertTexttoString()
-    // notesArray.push(addNote(title, body))
-    document.getElementById("createnotes").style.display = 'block';
-    slideout()    
-=======
     displaytitle(notearr)
     document.getElementById("createnotes").style.display = 'block';
     slideout()
->>>>>>> a2
     deleteNote()
 }
 
@@ -55,34 +40,16 @@ function createNoteObject(arr) {
     return newObject = { title: arr[0], body: arr[1]}
 }
 
-<<<<<<< HEAD
-function addNote(title, body) {
-    return { title, body }
-}
-
-// function convertTexttoString() {
-//     let str = ""
-//     const divs = [...document.querySelectorAll('[contenteditable] > div:not(:first-child)')]
-//     for (const i of divs) {
-//         str += `${i.textContent}\n`
-//     }
-//     return str
-// }
-
-=======
 function displaytitle(arr) {
     document.getElementById('note1').innerHTML = arr[0]
 }
 
->>>>>>> a2
 function deleteNote() {
     const div = document.querySelector('#note-area')
     document.getElementById("createnotes").style.display = 'block';
     div.remove()
 }
 
-<<<<<<< HEAD
-=======
 function displayNote() {
     let title = notesArray[0].title;
     let body = notesArray[0].body;
@@ -102,7 +69,6 @@ function closebtn() {
 
 }
 
->>>>>>> a2
 function slideout() {
     document.getElementById("slidemenu").style.display = 'block';
     document.getElementById("buttonleft").style.color = '#1f1d2e';
@@ -126,7 +92,6 @@ let buttonleft = document.getElementById("buttonleft");
 let buttonright = document.getElementById("buttonright");
 let bdy = document.getElementById('bdy')
 let idArray = [header, footer, sidebarmenu, icontent, bdy]
-<<<<<<< HEAD
 
 let countclick = 0;
 let darkmode = document.getElementById('darkmode');
@@ -148,69 +113,3 @@ darkmode.addEventListener('click', function () {
         countclick = 0;}
     }
     }});
-
-
-
-
-
-
-
-// function turnDark() {
-//     if (countclick == 0) {
-//     document.getElementById("header").style.backgroundColor = '#1f1d2e';
-//     document.getElementById("footer").style.backgroundColor = '#1f1d2e';
-//     document.getElementById("sidebarmenu").style.backgroundColor = '#1f1d2e';
-//     document.getElementById("icontent").style.backgroundColor = '#1f1d2e';
-//     document.getElementById("buttonleft").style.backgroundColor = '#1f1d2e';
-//     document.getElementById("buttonright").style.backgroundColor = '#1f1d2e';
-//     document.getElementById('bdy').style.color = '#fffaf3';
-//     countclick = 1;}
-//     else {
-//         document.getElementById("header").style.backgroundColor = '#f2e9de';
-//     document.getElementById("footer").style.backgroundColor = '#f2e9de';
-//     document.getElementById("sidebarmenu").style.backgroundColor = '#f2e9de';
-//     document.getElementById("icontent").style.backgroundColor = '#f2e9de';
-//     document.getElementById("buttonleft").style.backgroundColor = '#f2e9de';
-//     document.getElementById("buttonright").style.backgroundColor = '#f2e9de';
-//     document.getElementById('bdy').style.color = '#1f1d2e';
-//     countclick = 0;
-//     }}
-
-// function popout() {
-//     document.getElementById("addnotes").style.display = 'block';
-//     document.getElementById("itemcc2").style.display = 'block';
-//     document.getElementById("createnotes").style.display = 'none';
-//     document.getElementById("plus1").style.display = "none";
-//     document.getElementById("plus2").style.display = "block";
-//     document.getElementById("plus2").style.backgroundColor = "#191724";
-// }
-// function popin() {
-//     document.getElementById("addnotes").style.display = 'none';
-//     document.getElementById("itemcc2").style.display = 'none';
-//     document.getElementById("createnotes").style.display = 'block';
-//     document.getElementById("plus1").style.display = "block";
-//     document.getElementById("plus2").style.display = "none";
-// }
-=======
-
-let countclick = 0;
-let darkmode = document.getElementById('darkmode');
-darkmode.addEventListener('click', function () {
-    if (countclick == 0) {
-        for (let element of idArray ) {
-            if (element != bdy) {
-                element.style.backgroundColor = '#1f1d2e'
-        }   else {
-                element.style.color = '#fffaf3'
-        }
-    countclick = 1; } }
-    else {
-        for (const element of idArray) {
-            if (element != bdy) {
-                element.style.backgroundColor = '#f2e9de'
-        }   else {
-                element.style.color = '#1f1d2e'
-        countclick = 0;}
-    }
-    }});
->>>>>>> a2
