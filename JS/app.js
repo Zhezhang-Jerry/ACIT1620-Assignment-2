@@ -3,7 +3,7 @@ const notesArray = []
 function AddnotesSec() {
     html = `
     <div id="note-area">
-        <textarea id="addnotes" >Your note here.</textarea>
+        <textarea id="addnotes" contenteditable="true">You note here.</textarea>
         <div class="itemc2" id="itemcc2">
         <button class="sd" onclick="saveNote()">save</button>
         <button class="sd" onclick="deleteNote()">delete</button></div>
@@ -25,27 +25,39 @@ function setMouse() {
 }
 
 function saveNote() {
-    const div = document.querySelector('#addnotes')
-    const title = div.firstChild.textContent
-    const body = convertTexttoString()
-    notesArray.push(addNote(title, body))
-    document.getElementById("createnotes").style.display = 'block';    
-    document.getElementById("slidemenu").style.display = 'block';
+    const note = document.querySelector('textarea').value
+    console.log(note)
+    const notearr = note.split('\n\n')
+    notesArray.push(createNoteObject(notearr))
+    document.querySelector('textarea').value = ""
+    console.log(notesArray)
+    createNoteObject(notearr)
+    let output_textarea = document.querySelector('#note1')
+    output_textarea.textContent = notearr[0].value;
+    // const title = note.firstChild.textContent
+    // const body = convertTexttoString()
+    // notesArray.push(addNote(title, body))
+    document.getElementById("createnotes").style.display = 'block';
+    slideout()    
     deleteNote()
+}
+
+function createNoteObject(arr) {
+    return newObject = { title: arr[0], body: arr[1]}
 }
 
 function addNote(title, body) {
     return { title, body }
 }
 
-function convertTexttoString() {
-    let str = ""
-    const divs = [...document.querySelectorAll('[contenteditable] > div:not(:first-child)')]
-    for (const i of divs) {
-        str += `${i.textContent}\n`
-    }
-    return str
-}
+// function convertTexttoString() {
+//     let str = ""
+//     const divs = [...document.querySelectorAll('[contenteditable] > div:not(:first-child)')]
+//     for (const i of divs) {
+//         str += `${i.textContent}\n`
+//     }
+//     return str
+// }
 
 function deleteNote() {
     const div = document.querySelector('#note-area')
@@ -74,26 +86,34 @@ let sidebarmenu = document.getElementById("sidebarmenu");
 let icontent = document.getElementById("icontent");
 let buttonleft = document.getElementById("buttonleft");
 let buttonright = document.getElementById("buttonright");
-let bdy = document.getElementById('bdy');
-let idArray = [header, footer, sidebarmenu, icontent, buttonleft, buttonright, bdy]
+let bdy = document.getElementById('bdy')
+let idArray = [header, footer, sidebarmenu, icontent, bdy]
 
 let countclick = 0;
 let darkmode = document.getElementById('darkmode');
 darkmode.addEventListener('click', function () {
     if (countclick == 0) {
-        for (const element of idArray ) {
+        for (let element of idArray ) {
             if (element != bdy) {
                 element.style.backgroundColor = '#1f1d2e'
         }   else {
-                element.style.backgroundColor = 'fffaf3'
+                element.style.color = '#fffaf3'
         }
     countclick = 1; } }
     else {
         for (const element of idArray) {
-        element.style.backgroundColor = '#f2e9de'
+            if (element != bdy) {
+                element.style.backgroundColor = '#f2e9de'
+        }   else {
+                element.style.color = '#1f1d2e'
         countclick = 0;}
     }
-    });
+    }});
+
+
+
+
+
 
 
 // function turnDark() {
