@@ -13,13 +13,14 @@
     <link rel="stylesheet" href="CSS/styles.css">
     <title>Assignment2</title>
 </head>
-<body>
+<body id="bdy">
     <div class="container2">
-        <div class="item header">        
+        <div class="item header" id="header">        
             <nav>
-                <ul class="menu">
+                <ul class="menu" id="menu">
                     <li class="hlist"><a href="note.html">Docs</a></li>
                     <li class="hlist"><a href="index.html">About</a></li>
+                    <li class="hlist" id="darkmode"><button>Dark Mode</button></li>
                 </ul>
             </nav></div>
             <div class="item sidebar2" id="sidebarmenu"><div class="slbuttonclose2">
@@ -27,6 +28,7 @@
                 <button id="buttonright" class="bt2" type="button" onclick="slideout()">>></button></div>
             <ul id="slidemenu" class="sidemenu" style="display: none;">
                 <li class="nlist">My notes</li>
+<<<<<<< HEAD
                 <li class="nlist">note one</li>                
                 <li class="nlist">note two</li>
             </ul>
@@ -42,6 +44,20 @@
                 <button class="sd">save</button><button class="sd">delete</button></div>
         </div>
         <div class="item footer2">created by Jerry Zhang</div>
+=======
+                <li class="nlist" id="note1"></li>                
+                <li class="nlist" id="note2"></li>
+            </ul>
+            </div>
+        <div class="item content" id="icontent">
+            <div>
+                <span><button onclick="createNoteWArea()">+</button></span>
+                <div id="createnotes">create a new note</div>
+                <div id="content"></div>
+            </div>
+        </div>
+        <div class="item footer2" id="footer">created by Jerry Zhang</div>
+>>>>>>> a2
         <script src="JS/app.js"></script>
 </body>
 </html>

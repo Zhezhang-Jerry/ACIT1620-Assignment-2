@@ -1,11 +1,9 @@
-*   {
-    color: #31748f;
-
-}
 body    {
     margin: 0;
     border: 0;
     padding: 0;
+    color: #1f1d2e;
+
 }
 .container1 {
     display: grid;
@@ -138,14 +136,6 @@ body    {
     height: 30px;
 }
 
-.sd     {
-    border: 0;
-    padding: 1 20px;
-    text-align: center;
-    border-radius: 10px;
-    background-color: #f2e9de;
-}
-
 .plus   {
     border: 0;
     padding: 1 20px;
@@ -165,6 +155,11 @@ body    {
     width: 570px;
     height: 100px;
 
+}
+
+#note-area  {
+    display: flex;
+    flex-direction: column;
 }
 
 a:link, a:visited  {
@@ -258,10 +253,13 @@ label {
         position: relative;
         left: 50px;
         width: 50px;
+<<<<<<< HEAD
     }
     .sd {
         margin: 1rem;
         font-size: large;
+=======
+>>>>>>> a2
     }
     .sidebar2  {
         display: flex;
