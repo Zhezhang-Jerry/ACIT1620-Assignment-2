@@ -26,16 +26,13 @@ function setMouse() {
 
 function saveNote() {
     const note = document.querySelector('textarea').value
-    console.log(note)
     const notearr = note.split('\n\n')
     notesArray.push(createNoteObject(notearr))
     document.querySelector('textarea').value = ""
     console.log(notesArray)
-    createNoteObject(notearr)
-    let output_textarea = document.querySelector('#note1')
-    output_textarea.textContent = notearr[0].value;
+    displaytitle(notearr)
     document.getElementById("createnotes").style.display = 'block';
-    slideout()    
+    slideout()
     deleteNote()
 }
 
@@ -43,14 +40,33 @@ function createNoteObject(arr) {
     return newObject = { title: arr[0], body: arr[1]}
 }
 
-function addNote(title, body) {
-    return { title, body }
+function displaytitle(arr) {
+    document.getElementById('note1').innerHTML = arr[0]
 }
 
 function deleteNote() {
     const div = document.querySelector('#note-area')
     document.getElementById("createnotes").style.display = 'block';
     div.remove()
+}
+
+function displayNote() {
+    let title = notesArray[0].title;
+    let body = notesArray[0].body;
+    let totalNote = title+ '\n\n' + body;
+    document.getElementById('createnotes').style.display = 'none';
+    document.getElementById('closebutton').style.display = 'block';
+    document.getElementById('fullnote').style.display = 'block';
+    document.getElementById('fullnote').innerHTML = totalNote;
+}
+
+function closebtn() {
+    document.getElementById('closebutton').style.display = 'none';
+    document.getElementById('fullnote').style.display = 'none';
+    document.getElementById('createnotes').style.display = 'block';
+    document.getElementById('note1').value = ''
+    slidein()
+
 }
 
 function slideout() {
