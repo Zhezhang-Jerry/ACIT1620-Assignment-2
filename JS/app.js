@@ -3,7 +3,7 @@ const notesArray = []
 function AddnotesSec() {
     html = `
     <div id="note-area">
-        <textarea id="addnotes" contenteditable="true">You note here.</textarea>
+        <div id="addnotes" contenteditable="true">You note here.</div>
         <div class="itemc2" id="itemcc2">
         <button class="sd" onclick="saveNote()">save</button>
         <button class="sd" onclick="deleteNote()">delete</button></div>
@@ -37,7 +37,7 @@ function saveNote() {
     deleteNote()
 }
 
-function createNoteObject(arr) {
+function createNoteObject(title, body) {
     return newObject = { title, body }
 }
 
@@ -69,6 +69,8 @@ function createSlideTitle(notesArray) {
         let noteDisplay = document.createElement('li')
         noteDisplay.className = "slideTitle"
         noteDisplay.setAttribute("onclick", "displayNote("+count+")")
+        noteDisplay.innerHTML = i.title
+        document.getElementById('slidemenu').appendChild(noteDisplay)
         count += 1
     }
 }
@@ -79,10 +81,10 @@ function deleteNote() {
     div.remove()
 }
 
-function displayNote() {
-    let title = notesArray[0].title;
-    let body = notesArray[0].body;
-    let totalNote = title+ '\n\n' + body;
+function displayNote(index) {
+    let title = notesArray[index].title;
+    let body = notesArray[index].body;
+    let totalNote = title+ '<br>' + body;
     document.getElementById('createnotes').style.display = 'none';
     document.getElementById('closebutton').style.display = 'block';
     document.getElementById('fullnote').style.display = 'block';
