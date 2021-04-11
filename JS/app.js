@@ -25,23 +25,52 @@ function setMouse() {
 }
 
 function saveNote() {
-    const note = document.querySelector('textarea').value
-    const notearr = note.split('\n\n')
-    notesArray.push(createNoteObject(notearr))
-    document.querySelector('textarea').value = ""
-    console.log(notesArray)
-    displaytitle(notearr)
+    const note = document.querySelector('#addnotes')
+    const title = note.firstChild.textContent
+    const body = divToString()
+    notesArray.push(createNoteObject(title, body))
+    
+    displayTitle(notesArray)
+
     document.getElementById("createnotes").style.display = 'block';
     slideout()
     deleteNote()
 }
 
 function createNoteObject(arr) {
-    return newObject = { title: arr[0], body: arr[1]}
+    return newObject = { title, body }
 }
 
-function displaytitle(arr) {
-    document.getElementById('note1').innerHTML = arr[0]
+function divToString() {
+    let str = ""
+    const divs = [...document.querySelectorAll('[contenteditable] > div')]
+    console.log(divs)
+    for (const i of divs) {
+        console.log(i.textContent)
+        str += `${i.textContent}\n`
+    }
+    return str
+}
+
+function displayTitle(notesArray) {
+    if(notesArray.length === 1) {
+        createSlideTitle(notesArray)
+    }
+    else {
+        const clearTitle = document.querySelectorAll('.slideTitle')
+        clearTitle.forEach(function(a){a.remove()})
+        createSlideTitle(notesArray)
+    }
+}
+
+function createSlideTitle(notesArray) {
+    let count = 0
+    for (const i of notesArray) {
+        let noteDisplay = document.createElement('li')
+        noteDisplay.className = "slideTitle"
+        noteDisplay.setAttribute("onclick", "displayNote("+count+")")
+        count += 1
+    }
 }
 
 function deleteNote() {
